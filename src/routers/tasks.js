@@ -16,18 +16,7 @@ router.post("/tasks", auth, async(req, res) => {
     }
 });
 
-// router.get("/tasks", auth, async(req, res) => {
-//     try {
-//         // const tasks = await Task.find({ owner: req.user._id });
 
-//         await req.user.populate("taskss").execPopulate();
-//         res.send(req.user.tasks);
-//     } catch (e) {
-//         res.status(500).send();
-//     }
-// });
-
-// GET /tasks?completed=true
 router.get("/tasks", auth, async(req, res) => {
     const match = {};
     const sort = {};
